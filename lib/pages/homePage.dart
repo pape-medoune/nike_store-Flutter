@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Container(
           width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
             color: Color(0xffDBDBDB),
           ),
@@ -118,6 +117,138 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.normal,
                         fontSize: 18,
                         color: Color.fromARGB(255, 179, 166, 254),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width / 1.15,
+                      height: 450,
+                      decoration: BoxDecoration(
+                          // color: Colors.deepPurple,
+                          ),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Container(
+                            height: 500,
+                            width: MediaQuery.of(context).size.width / 1.15,
+                            decoration: BoxDecoration(
+                              color: Color(
+                                0xffF1F1F1,
+                              ),
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
+                            ),
+                            child: Stack(
+                              children: [
+                                Column(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(
+                                        20,
+                                      ),
+                                      child: Image.asset(
+                                        "images/nike3.png",
+                                        width: double.infinity,
+                                        height: 300,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 15,
+                                      ),
+                                      child: Text(
+                                        "The forwards thinking design of his lastest signature shoes",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          color: Color(
+                                            0xffB8B8B8,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Positioned(
+                                  bottom: 10,
+                                  left: 15,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Zoom Freak",
+                                        textAlign: TextAlign.start,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 25,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 8,
+                                      ),
+                                      Text(
+                                        "150.000f",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          color: Color(
+                                            0xffB8B8B8,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      color: Color(
+                                        0xff1A191C,
+                                      ),
+                                      borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(
+                                          20,
+                                        ),
+                                        topLeft: Radius.circular(
+                                          20,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                          size: 30,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -222,35 +353,52 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: SalomonBottomBar(
-        currentIndex: _currentIndex,
-        onTap: (i) => setState(() => _currentIndex = i),
+        backgroundColor: Color(
+          0xffD6D6D6,
+        ),
+        itemPadding: EdgeInsets.symmetric(
+          horizontal: 30,
+          vertical: 15,
+        ),
+        // currentIndex: _currentIndex,
+        // onTap: (i) => setState(() => _currentIndex = i),
         items: [
           /// Home
           SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-            selectedColor: Colors.purple,
+            icon: Icon(
+              Icons.home,
+              color: Color(
+                0xff4E4E4E,
+              ),
+            ),
+            title: Text(
+              "Shop",
+              style: TextStyle(
+                color: Color(
+                  0xff4E4E4E,
+                ),
+              ),
+            ),
+            selectedColor: Color.fromARGB(255, 143, 143, 143),
           ),
 
           /// Likes
           SalomonBottomBarItem(
-            icon: Icon(Icons.favorite_border),
-            title: Text("Likes"),
-            selectedColor: Colors.pink,
-          ),
-
-          /// Search
-          SalomonBottomBarItem(
-            icon: Icon(Icons.search),
-            title: Text("Search"),
-            selectedColor: Colors.orange,
-          ),
-
-          /// Profile
-          SalomonBottomBarItem(
-            icon: Icon(Icons.person),
-            title: Text("Profile"),
-            selectedColor: Colors.teal,
+            icon: Icon(
+              Icons.shopping_bag,
+              color: Color(
+                0xff4E4E4E,
+              ),
+            ),
+            title: Text(
+              "Carts",
+              style: TextStyle(
+                color: Color(
+                  0xff4E4E4E,
+                ),
+              ),
+            ),
+            selectedColor: Color.fromARGB(255, 143, 143, 143),
           ),
         ],
       ),
