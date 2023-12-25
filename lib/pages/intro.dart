@@ -6,9 +6,7 @@ class Intro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        // child: SafeArea(
-        // child: Expanded(
+      body: SingleChildScrollView( 
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -55,7 +53,9 @@ class Intro extends StatelessWidget {
                   height: 50,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed("/home");
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       color: Color(0xff2A2A2C),
@@ -80,9 +80,7 @@ class Intro extends StatelessWidget {
             ),
           ),
         ),
-      ),
-      // ),
-      // ),
+      ), 
     );
   }
 }
