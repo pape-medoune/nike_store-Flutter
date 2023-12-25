@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var _currentIndex;
     return Scaffold(
       key: _scaffoldKey,
       body: SingleChildScrollView(
@@ -145,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'images/Nike.png',
+                      'images/image-removebg-preview.png',
                     ),
                   ],
                 ),
@@ -218,6 +220,39 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: SalomonBottomBar(
+        currentIndex: _currentIndex,
+        onTap: (i) => setState(() => _currentIndex = i),
+        items: [
+          /// Home
+          SalomonBottomBarItem(
+            icon: Icon(Icons.home),
+            title: Text("Home"),
+            selectedColor: Colors.purple,
+          ),
+
+          /// Likes
+          SalomonBottomBarItem(
+            icon: Icon(Icons.favorite_border),
+            title: Text("Likes"),
+            selectedColor: Colors.pink,
+          ),
+
+          /// Search
+          SalomonBottomBarItem(
+            icon: Icon(Icons.search),
+            title: Text("Search"),
+            selectedColor: Colors.orange,
+          ),
+
+          /// Profile
+          SalomonBottomBarItem(
+            icon: Icon(Icons.person),
+            title: Text("Profile"),
+            selectedColor: Colors.teal,
+          ),
+        ],
       ),
     );
   }
