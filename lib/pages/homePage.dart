@@ -134,6 +134,125 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Container(
                             height: 500,
+                            width: MediaQuery.of(context).size.width / 1.4,
+                            decoration: BoxDecoration(
+                              color: Color(
+                                0xffF1F1F1,
+                              ),
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
+                            ),
+                            child: Stack(
+                              children: [
+                                Column(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(
+                                        20,
+                                      ),
+                                      child: Image.asset(
+                                        "images/nike3.png",
+                                        width: double.infinity,
+                                        height: 300,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 15,
+                                      ),
+                                      child: Text(
+                                        "The forwards thinking design of his lastest signature shoes",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          color: Color(
+                                            0xffB8B8B8,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Positioned(
+                                  bottom: 10,
+                                  left: 15,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "Zoom Freak",
+                                        textAlign: TextAlign.start,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 25,
+                                          color: Color.fromARGB(255, 0, 0, 0),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 8,
+                                      ),
+                                      Text(
+                                        "150.000f",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                          color: Color(
+                                            0xffB8B8B8,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                      color: Color(
+                                        0xff1A191C,
+                                      ),
+                                      borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(
+                                          20,
+                                        ),
+                                        topLeft: Radius.circular(
+                                          20,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                          size: 30,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                                  width: 40,
+                                ),
+                          Container(
+                            height: 500,
                             width: MediaQuery.of(context).size.width / 1.15,
                             decoration: BoxDecoration(
                               color: Color(
@@ -178,6 +297,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ],
                                 ),
+                                
                                 Positioned(
                                   bottom: 10,
                                   left: 15,
