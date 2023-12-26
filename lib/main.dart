@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nike Store',
       debugShowCheckedModeBanner: false,
-      home: Intro(),
+      home: ShopPage(),
 
       routes: {
         '/home': (_) => HomePage(),

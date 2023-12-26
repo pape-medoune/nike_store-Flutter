@@ -253,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                           Container(
                             height: 500,
-                            width: MediaQuery.of(context).size.width / 1.15,
+                            width: MediaQuery.of(context).size.width / 1.4,
                             decoration: BoxDecoration(
                               color: Color(
                                 0xffF1F1F1,
@@ -271,7 +271,7 @@ class _HomePageState extends State<HomePage> {
                                         20,
                                       ),
                                       child: Image.asset(
-                                        "images/nike3.png",
+                                        "images/nike1.webp",
                                         width: double.infinity,
                                         height: 300,
                                         fit: BoxFit.cover,
