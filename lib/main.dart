@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike/pages/homePage.dart';
+import 'package:nike/pages/home.dart'; 
 import 'package:nike/pages/intro.dart';
 import 'package:nike/pages/shopPage.dart';
 
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nike Store',
       debugShowCheckedModeBanner: false,
-      home: ShopPage(),
+      home: Intro(),
 
       routes: {
-        '/home': (_) => HomePage(),
+        '/home': (_) => Home(),
         '/shop': (_) => ShopPage(),
       },
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,8 +12,7 @@ class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
-  Widget build(BuildContext context) {
-    var _currentIndex;
+  Widget build(BuildContext context) { 
     return Scaffold(
       key: _scaffoldKey,
       body: SingleChildScrollView(
@@ -472,56 +471,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: SalomonBottomBar(
-        backgroundColor: Color(
-          0xffD6D6D6,
-        ),
-        itemPadding: EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 15,
-        ),
-        // currentIndex: _currentIndex,
-        // onTap: (i) => setState(() => _currentIndex = i),
-        items: [
-          /// Home
-          SalomonBottomBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Color(
-                0xff4E4E4E,
-              ),
-            ),
-            title: Text(
-              "Shop",
-              style: TextStyle(
-                color: Color(
-                  0xff4E4E4E,
-                ),
-              ),
-            ),
-            selectedColor: Color.fromARGB(255, 143, 143, 143),
-          ),
-
-          /// Likes
-          SalomonBottomBarItem(
-            icon: Icon(
-              Icons.shopping_bag,
-              color: Color(
-                0xff4E4E4E,
-              ),
-            ),
-            title: Text(
-              "Carts",
-              style: TextStyle(
-                color: Color(
-                  0xff4E4E4E,
-                ),
-              ),
-            ),
-            selectedColor: Color.fromARGB(255, 143, 143, 143),
-          ),
-        ],
-      ),
-    );
+       );
   }
 }
